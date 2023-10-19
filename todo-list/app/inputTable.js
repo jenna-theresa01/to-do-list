@@ -1,11 +1,16 @@
-export default function InputTable () {
-    
-    
-    return(
-        <div>
-            <div 
+// import React, { useState, useEffect } from 'react'
 
-            />
-        </div>
-    )
-}
+// export default function InputTable () {
+    
+//     const [taskData, setTaskData] = useState({});
+
+
+    
+//     return(
+//         <table>
+            
+//         </table>
+        
+
+//     )
+// }
