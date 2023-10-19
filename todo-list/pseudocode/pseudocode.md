@@ -57,8 +57,13 @@
 ##### Must Have
 
 > Input box
-> Task List
+> Task List dropdown
 > Tabs to show different items of state
+> display of all task list items
+> check off finished tasks (not necessarily check boxes but something to cross off tasks)
+> count of to dos
+> ability to remove item from list
+> ability to target all list items to change state back to to-do 
 
 ##### Should Have
 
