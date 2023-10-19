@@ -7,11 +7,12 @@ import InputBox from './inputBox'
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div>
-        <Title />
-        <InputBox />
-      </div>
-    </main>
+      <main className={styles.main}>
+        <div>
+          <Title />
+          <InputBox />
+        </div>
+      </main>
+
   )
 }
