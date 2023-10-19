@@ -67,12 +67,12 @@
 
 ##### Should Have
 
-> 
+> hover function to delete tasks from list
 
 ##### Could Have
 
 > Check boxes
-> hover function to delete tasks from list
+> 
 
 ##### Won't Have
 
