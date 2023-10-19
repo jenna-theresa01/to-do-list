@@ -18,18 +18,21 @@ useEffect(() => {
 
 }, [tasks]);
 
+function addTask(newTask) {
+  this.setState({toDoTasks: [...this.state.toDoTasks, newTask]})
+ }
+
 function handleButtonClick (e) {
   console.log(e);
   let results = [];
-  results.push({inputText});
+  
 }
 
-function handleKeyPress (e) {
-  console.log(e);
-  let textResults = [];
-  textResults.push({inputText});
-}
-
+// function handleKeyPress (e) {
+//   console.log(e);
+//   let textResults = [];
+  
+// }
   
   return (
       <main className={styles.main}>
@@ -37,7 +40,7 @@ function handleKeyPress (e) {
           <Title />
           <InputBoxWithButton 
             handleButtonClick={handleButtonClick}
-            handleKeyPress={handleKeyPress}
+            // handleKeyPress={handleKeyPress}
           />
          
         </div>
