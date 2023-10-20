@@ -15,8 +15,8 @@ export default function InputBoxWithButton (props) {
                 <div className="input-with-button" style={inputBoxStyle}>
                     <input 
                     type="text"
-                    value={props.inputTask}
-                    onChange={(e) => props.setInputTask(e.target.value)}
+                    value={props.inputTask} //sets the value of the input field
+                    onChange={(e) => props.setInputTask(e.target.value)} //this is an event handler for the "onChange" event
                     placeholder="Add Task"
                     id="todo-input-field"
                     />
