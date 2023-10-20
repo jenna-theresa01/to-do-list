@@ -6,34 +6,35 @@ import 'bootstrap/dist/js/bootstrap.min.js'
 import Title from './title'
 import InputBoxWithButton from './inputBox'
 import InputTable from './inputTable'
+import TabGroups from './tabGroups'
 
 
 export default function Home() {
 
-const storedTasks = JSON.parse(localStorage.getItem('tasks'));
 
-const [tasks, setTasks] = useState([]);
+const storedTasks = JSON.parse(localStorage.getItem('tasks')) || [];
+
+const [inputTask, setInputTask] = useState('');
+const [tasks, setTasks] = useState(storedTasks);
+
 
 useEffect(() => {
   localStorage.setItem('tasks', JSON.stringify(tasks))
 
 }, [tasks]);
 
-function addTask(newTask) {
-  this.setState({toDoTasks: [...this.state.toDoTasks, newTask]})
- }
+// function addTask(newTask) {
+//   this.setState({toDoTasks: [...this.state.toDoTasks, newTask]})
+//  }
 
-function handleButtonClick (e) {
-  console.log(e);
-  let tasks = [];
-  
+let handleButtonClick = () => {
+  if (inputTask !== "") {
+
+    setTasks([...tasks, inputTask]);
+    setInputTask("");
+  }
 }
 
-function handleKeyPress (e) {
-  console.log(e);
-  let textResults = [];
-  
-}
   
   return (
       <main className={styles.main}>
@@ -41,12 +42,12 @@ function handleKeyPress (e) {
           <Title />
           <InputBoxWithButton 
             handleButtonClick={handleButtonClick}
-            handleKeyPress={handleKeyPress}
           />
-         <InputTable 
-         tasks={[tasks]}
-         />
+          <InputTable 
+          tasks={[tasks]}
+          />
         </div>
+        <TabGroups />
       </main>
 
   )
