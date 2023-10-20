@@ -16,6 +16,7 @@ const storedTasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
 const [inputTask, setInputTask] = useState('');
 const [tasks, setTasks] = useState(storedTasks);
+const [showTask, setShowTask] = useState(false);
 
 
 useEffect(() => {
@@ -23,25 +24,25 @@ useEffect(() => {
 
 }, [tasks]);
 
-// function addTask(newTask) {
-//   this.setState({toDoTasks: [...this.state.toDoTasks, newTask]})
-//  }
-
 let handleButtonClick = () => {
   if (inputTask !== "") {
+    setShowTask(!showTask)
 
     setTasks([...tasks, inputTask]);
     setInputTask("");
   }
 }
 
-  
   return (
       <main className={styles.main}>
         <div>
           <Title />
           <InputBoxWithButton 
-            handleButtonClick={handleButtonClick}
+          inputTask={inputTask}
+          setInputTask={setInputTask}
+          showTask={showTask}
+          setShowTask={setShowTask}
+          handleButtonClick={handleButtonClick}
           />
           <InputTable 
           tasks={[tasks]}
