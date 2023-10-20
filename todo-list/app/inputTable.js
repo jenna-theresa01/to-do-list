@@ -1,16 +1,16 @@
-// import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 
-// export default function InputTable () {
+export default function InputTable () {
     
-//     const [taskData, setTaskData] = useState({});
+    const [taskData, setTaskData] = useState({});
 
 
     
-//     return(
-//         <table>
+    return(
+        <table>
             
-//         </table>
+        </table>
         
 
-//     )
-// }
+    )
+}
