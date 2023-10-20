@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/js/bootstrap.min.js'
 import Title from './title'
 import InputBoxWithButton from './inputBox'
+import InputTable from './inputTable'
 
 
 export default function Home() {
@@ -24,15 +25,15 @@ function addTask(newTask) {
 
 function handleButtonClick (e) {
   console.log(e);
-  let results = [];
+  let tasks = [];
   
 }
 
-// function handleKeyPress (e) {
-//   console.log(e);
-//   let textResults = [];
+function handleKeyPress (e) {
+  console.log(e);
+  let textResults = [];
   
-// }
+}
   
   return (
       <main className={styles.main}>
@@ -40,9 +41,11 @@ function handleButtonClick (e) {
           <Title />
           <InputBoxWithButton 
             handleButtonClick={handleButtonClick}
-            // handleKeyPress={handleKeyPress}
+            handleKeyPress={handleKeyPress}
           />
-         
+         <InputTable 
+         tasks={[tasks]}
+         />
         </div>
       </main>
 
